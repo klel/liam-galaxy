@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Убираем прокрутку */
+}
+
+.game-area {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+    background: url('/assets/back.png') repeat-y;
+    background-size: cover;
+    position: absolute;
+}
+
+
+.space-ship {
+    height: 90px;
+    width: 70px;
+    background: url("./assets/space-ship.png") center no-repeat;
+    background-size: contain;
+    transform: rotate(180deg);
+    /*margin-top: auto;*/
+    position: absolute;
+    background-size: cover;
+    position: absolute;
+}
+
+
+.asteroid {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('/assets/asteroid.png') no-repeat center;
+    background-size: contain;
+}
+
+.bullet {
+    position: absolute;
+    width: 8px;
+    height: 20px;
+    background: red;
+}
+
+.explosion {
+    width: 50px;
+    height: 50px;
+    background: url('/assets/xplosion.gif') no-repeat center;
+    background-size: cover;
+    position: absolute;
+    animation: explode 1s forwards;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: red;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
