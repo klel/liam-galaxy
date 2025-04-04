@@ -21,12 +21,10 @@ body {
     height: 90px;
     width: 70px;
     background: url("./assets/space-ship.png") center no-repeat;
-    background-size: contain;
     transform: rotate(180deg);
     /*margin-top: auto;*/
     position: absolute;
     background-size: cover;
-    position: absolute;
 }
 
 
